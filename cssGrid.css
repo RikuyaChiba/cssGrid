@@ -1,7 +1,17 @@
-#container {
+#grid-container-way1 {
     display: grid;
     grid-template-rows: 100px 50px;
     grid-template-columns: 150px 1fr;
+    margin-bottom: 30px;
+}
+
+#grid-container-way2 {
+    display: grid;
+    grid-template-rows: 100px 50px;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: 
+    "areaD areaE"
+    "areaD areaF";
 }
 
 #itemA {
@@ -20,4 +30,19 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     background-color: hsl(60, 100%, 50%);
+}
+
+#itemD {
+    grid-area: areaD;
+    background-color: hsl(180, 100%, 50%);
+}
+
+#itemE {
+    grid-area: areaE;
+    background-color: hsl(120, 100%, 50%);
+}
+
+#itemF {
+    grid-area: areaF;
+    background-color: hsl(200, 100%, 50%);
 }
